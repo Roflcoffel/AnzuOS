@@ -1,0 +1,14 @@
+; AnzuOS GOAL
+; 16 bit RealMode OS, 1MB RAM is usable.
+; Should work on an Sharp PC.
+; The dream goal would be, being able to develop an application inside the os in c.
+; Scope of the project is a very minimal version of MikeOS.
+
+; Next Objective:
+; Create a version of the backspace routine without printing 3 character (2 Backspace, 1 Space, Currently)
+; Handle return character properly, set Cursor_X = 0, Increment Cursor_Y, etc..
+; Seperate out the bootloader part, and have it locate the kernel and load it.
+
+
+NOTES:
+; The flp file seems not to be needed. (this was from the mikeOS tutorial)
