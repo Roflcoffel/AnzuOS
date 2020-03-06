@@ -44,15 +44,15 @@ print_string:         ; Ouput string in SI to screen
 prompt:
     mov al, 3Eh       ; (62 = >) Greater than sign
     int 10h
-    mov ah, 1h        ; Change Cursor to Block Shaped
-    mov cl, 7h        
-    mov ch, 0h
+    mov ah, 01h        ; Change Cursor to Block Shaped
+    mov cl, 07h        
+    mov ch, 00h
     int 10h
     ret
 
 clear:
-    mov ah, 0h        ; Set Video mode
-    mov al, 3h        ; 80x25 Video Mode
+    mov ah, 00h        ; Set Video mode
+    mov al, 03h        ; 80x25 Video Mode
     int 10h
     mov ax, 0600h     ; Scroll up
     mov bh, 1Fh       ; 1h = blue, background, fh = White, foreground
